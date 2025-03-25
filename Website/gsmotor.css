@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+/******* Main-Content *******/
+.main_content {
+    width: 100%;
+    height: max-content;
+}
+
+img {
+    -drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+
+/******* MINIMIZE-HEADER *******/
+.minimize-header {
+    position: fixed;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    align-items: center;
+    padding-left: 30px;
+}
+
+/** TOGGLE-BUTTON **/
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.toggle-button .toggle-bar {
+    top: 0;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius:10px;
+}
+
+
+.minimize-logo {
+    width: 200px;
+    height: 50%;
+    display: flex;
+    background: url('image/background-img/gousu.png');
+    background-size: cover;
+}
+
+.minimize-logo:hover {
+    background: url('image/background-img/gousu-red.png');
+    background-size: cover;
+}
+
+/******* Toggle Menu *******/
+.toggle-menu {
+    display: none;
+    width: 100%;
+    height: 500px;
+    opacity: 0;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    -moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.75);
+    -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    animation: fadeIn 0.7s;
+    -webkit-animation: fadeIn 0.7s;
+    -moz-animation: fadeIn 0.7s;
+    -o-animation: fadeIn 0.7s;
+    -ms-animation: fadeIn 0.7s;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+
+
+
+
+
+
+/******* Header-Bar *******/
+.header-bar {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    color: black;
+    display: flex;
+    padding: 0 7%;
+    background-color: white;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); 
+    z-index: 999;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.bar-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    vertical-align: center;
+}
+
+.header-logo {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.header-logo-nav {
+    width: 100%;
+    height: 100%;
+    background: url('image/background-img/gousu.png');
+    background-size: cover;
+}
+
+.header-logo-nav:hover {
+    background: url('image/background-img/gousu-red.png');
+    background-size: cover;
+}
+
+#header-logo-a {
+    width: 200px;
+    height: 50%;
+}
+
+
+.header-bar li, .header-bar a {
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+.header-bar li:hover{
+    color: red;
+}
+
+
+.header-bar li {
+    display: inline-block;
+    padding: 0 40px;
+    padding-top: 13px;
+    height: 45px;
+}
+
+/*** MOTORCYCLES MORE DROPDOWN ***/
+.nav-bar-arrow-down {
+    margin-bottom: 4px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* - DROPDOWN NAVIGATION - */
+.motorcycles-dropdown-div {
+    display: inline-block;
+    width: fit-content;
+}
+
+.motorcycles-dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 228.14px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+    border-radius: 5px;
+}
+
+.motorcycles-dropdown-content a {
+    float: none;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    display: block;
+    font-size: 17px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: .2px solid rgba(195, 194, 194, 0.49);
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -o-animation: fadeIn 0.5s;
+    -ms-animation: fadeIn 0.5s;
+}
+
+.motorcycles-dropdown-content a:hover {
+    background-color: rgb(244, 243, 243);
+    color: red;
+}
+.motorcycles-dropdown-first:hover {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.motorcycles-dropdown-last:hover {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+@media (max-width: 1200px) {
+    .header-bar {
+        display: none;
+    }
+
+    .minimize-header {
+        display: flex;
+    }
+}
+
+
+/**** Main IMG ****/
+.main-img {
+    margin-top: 80px;
+    width: 100%;
+    height: 650px;
+}
+
+
+
+
+
+
+/****** Footer ******/
+.footer {
+    width: 100%;
+    height: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: #eaeff2;
+    border-top: 2px solid grey;
+}
+
+.footer-left {
+    width: 50%;
+    height: 100%;
+    padding: 15px 10px 10px 30px;
+}   
+
+.footer-left p {
+    font-size:32px;
+    font-family: 'Mulish', Arial, 'Open Sans SC';
+}
+
+.footer-left .p2 {
+    font-size:16px;
+}
+
+.footer-right {
+    width: 50%;
+    height: 100%;
+    padding: 10px 10px 10px 30px;
+}
+
+.right-p1 {
+    font-size:32px;
+    font-weight: 900;
+}
+
+.icon-location {
+    width: 25px;
+    height: 25px;
+}
+.icon-phone {
+    width: 20px;
+    height: 20px;
+}
+
+.location-div, .phone-div {
+    display: flex;
+    align-items: center;
+}
+
+.location-div a, .location-div a:visited, .phone-div a, .phone-div a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.location-div a:hover, .phone-div a:hover {
+    text-decoration: underline;
+}
+
+.copyright-bar {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363a45;
+    color: #a5a5a5;
+}
+
